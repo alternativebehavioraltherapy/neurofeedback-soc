@@ -41,7 +41,7 @@ export const CHRONOLOGY: { year: string; text: string }[] = [
   },
   {
     year: "2025",
-    text: "IQCB supported two documents: Collura and colleagues, minimum technical requirements for clinical QEEG (Clinical EEG and Neuroscience; received 7 June 2023, accepted 3 December 2024), and recommended guidelines for QEEG report writing dated 16 March 2025. Both require a qualified person to review the raw EEG. Neither is a general neurofeedback Standard of Care.",
+    text: "The International QEEG Certification Board supported two quantitative-EEG instruments. Collura and colleagues published minimum technical requirements for clinical QEEG in Clinical EEG and Neuroscience (received 7 June 2023, accepted 3 December 2024). The guideline asks for a 19-site recording, eyes-open and eyes-closed samples, visual inspection of the whole raw tracing by a qualified reviewer, and a check of any automated artifacting or computer-generated maps against that tracing. An IQCB committee, dated 16 March 2025, recommended a seven-part report, a disclaimer that the report does not diagnose, and a signature by a qualified clinician. Software and AI may help gather or summarize. They are not the interpretation. These are QEEG guidelines, not a field-wide Standard of Care for neurofeedback.",
   },
   {
     year: "2026",
@@ -147,7 +147,7 @@ export const HISTORY_ROWS: HistoryRow[] = [
   {
     source: "Collura and colleagues (2025). IQCB Guideline: Minimum Technical Requirements for Performing Clinical QEEG. Clinical EEG and Neuroscience, 56(5), 391–399.",
     type: "QEEG technical guideline",
-    what: "Acquisition, visual inspection of the raw EEG, artifact handling, and quantitative processing minima.",
+    what: "IQCB-supported minimum for clinical QEEG. A 19-site 10–20 recording, about ten minutes eyes open and ten minutes eyes closed, then visual inspection of the whole raw tracing. Quantification uses about two to five minutes of artifact-free data in each condition. Automated artifact rejection, source imaging, and discriminant functions may assist. They do not replace inspection of the original traces. Intended for practicum submissions, intakes, baselines, and comparative use.",
     not: "Not a general neurofeedback Standard of Care.",
     links: [
       { label: "DOI", href: "https://doi.org/10.1177/15500594241308654" },
@@ -158,7 +158,7 @@ export const HISTORY_ROWS: HistoryRow[] = [
   {
     source: "IQCB Recommended Guidelines for QEEG Report Writing (16 March 2025).",
     type: "QEEG report-writing guidance",
-    what: "Recommended report sections. Computer-generated text does not replace clinician review of raw traces.",
+    what: "IQCB committee guidance of 16 March 2025. Seven sections: clinician identity, client information, technical methods, surface EEG observations, quantitative findings, summary and recommendations within scope, and appendices. The report carries a disclaimer that it does not diagnose. A qualified clinician (QEEG-D or QEEG-DL) reviews and signs it. AI may help gather or summarize. It is not the interpretation, and it does not replace artifact review or clinical correlation.",
     not: "Not a general neurofeedback Standard of Care.",
     links: [
       { label: "IQCB PDF", href: "https://qeegcertificationboard.org/wp-content/uploads/IQCB-Guidelines-for-Report-Writing-03-16-2025.pdf" },
