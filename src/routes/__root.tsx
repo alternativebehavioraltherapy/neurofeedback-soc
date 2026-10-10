@@ -58,14 +58,14 @@ function NotFound() {
       <p className="mt-6 text-xs uppercase tracking-[0.18em] text-gold">Not found</p>
       <h1 className="mt-3 font-serif text-3xl text-navy">This page is not in the working draft.</h1>
       <p className="mt-4 text-muted">
-        Return to the proposal, the draft standards, or the document library.
+        Return to the proposal, the draft standards, or the history of practice standards.
       </p>
       <p className="mt-6 flex flex-wrap gap-4">
         <a href="/" className="text-teal">
           Home
         </a>
-        <a href="/documents" className="text-teal">
-          Documents
+        <a href="/history" className="text-teal">
+          History
         </a>
       </p>
     </div>

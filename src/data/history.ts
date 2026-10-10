@@ -51,6 +51,20 @@ export const CHRONOLOGY: { year: string; text: string }[] = [
 
 export const HISTORY_ROWS: HistoryRow[] = [
   {
+    source: "This working group. Essential Practice Standards for Neurofeedback.",
+    type: "Working-group draft",
+    what: "The proposed standards text in 14 domains, including required raw-trace validation when quantitative EEG guides training.",
+    not: "Not a society-ratified Standard of Care. Not in force.",
+    links: [{ label: "Download", href: "/docs/Essential_Practice_Standards_for_Neurofeedback.docx" }],
+  },
+  {
+    source: "This working group. History of Neurofeedback Practice Standards.",
+    type: "Working-group file",
+    what: "This chronology and source map, as a file.",
+    not: "Not an adopted instrument. A map of the other documents.",
+    links: [{ label: "Download", href: "/docs/History_of_Neurofeedback_Practice_Standards.docx" }],
+  },
+  {
     source: "Hammond, D. C., and Kirk, L. (2008). First, do no harm. Journal of Neurotherapy, 12(1), 79–88.",
     type: "Journal article / call for standards",
     what: "Documents adverse effects and argues that uneven training created a need for practice standards and licensed scope.",

@@ -135,9 +135,6 @@ function Footer() {
             <Link to="/history" className="text-paper/90 no-underline hover:underline">
               History
             </Link>
-            <Link to="/documents" className="text-paper/90 no-underline hover:underline">
-              Documents
-            </Link>
             <Link to="/structure" className="text-paper/90 no-underline hover:underline">
               Structure
             </Link>

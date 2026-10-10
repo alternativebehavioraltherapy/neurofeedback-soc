@@ -14,6 +14,7 @@ const FILTERS = ["All", "Position papers", "Ethics & guidelines", "Certification
 
 function bucket(type: string): (typeof FILTERS)[number] {
   const t = type.toLowerCase();
+  if (t.includes("working-group")) return "All";
   if (t.includes("position") || t.includes("journal") || t.includes("call for")) return "Position papers";
   if (t.includes("ethics") || t.includes("guideline") || t.includes("society page") || t.includes("association"))
     return "Ethics & guidelines";

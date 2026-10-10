@@ -327,7 +327,7 @@ export const SECTIONS: StandardSection[] = [
       },
       {
         kind: "p",
-        text: "Two 2025 documents from the International QEEG Certification Board address the same gap from the quantitative-EEG side: minimum technical requirements for clinical QEEG, and recommended guidelines for QEEG report writing. This working group does not adopt them. They are prior instruments. They require visual review of the raw record, a qualified clinician’s sign-off, and a limit on automated or AI interpretation. Copies are in the documents library.",
+        text: "Two 2025 documents from the International QEEG Certification Board address the same gap from the quantitative-EEG side: minimum technical requirements for clinical QEEG, and recommended guidelines for QEEG report writing. This working group does not adopt them. They are prior instruments. They require visual review of the raw record, a qualified clinician’s sign-off, and a limit on automated or AI interpretation. Copies are linked from the history of practice standards.",
       },
     ],
   },
