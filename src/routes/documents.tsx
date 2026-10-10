@@ -16,7 +16,7 @@ function Documents() {
       <PageHeader
         kicker="Library"
         title="Documents"
-        lede="Download the proposed standards and the history and source map. Each file is stored with this site."
+        lede="Download the proposed standards, the history and source map, and the 2025 IQCB documents stored with this site. The IQCB files are prior instruments. This working group did not write them and does not adopt them."
       />
       <div className="mx-auto max-w-3xl px-4 py-10 grid gap-4">
         {DOCUMENTS.map((doc) => (

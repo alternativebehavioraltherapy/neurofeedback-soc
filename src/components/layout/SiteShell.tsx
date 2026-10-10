@@ -141,6 +141,9 @@ function Footer() {
             <Link to="/structure" className="text-paper/90 no-underline hover:underline">
               Structure
             </Link>
+            <Link to="/working-group" className="text-paper/90 no-underline hover:underline">
+              Working Group
+            </Link>
           </p>
         </div>
       </div>

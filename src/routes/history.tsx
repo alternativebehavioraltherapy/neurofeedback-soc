@@ -65,6 +65,44 @@ function History() {
         </ol>
       </section>
 
+      <section className="mx-auto max-w-3xl px-4 pb-4">
+        <h2 className="font-serif text-2xl text-navy mb-3">2025 IQCB documents</h2>
+        <p className="text-ink leading-relaxed">
+          Two IQCB documents from 2025 belong in this history because they require a qualified person to look at the
+          original EEG before quantitative results are used. This working group did not write them and does not adopt
+          them. They are prior instruments, stored here so the source map can be read without leaving the site.
+        </p>
+        <ul className="mt-4 space-y-4">
+          <li>
+            <p className="font-medium text-navy">Minimum technical requirements for clinical QEEG</p>
+            <p className="mt-1 text-muted leading-relaxed">
+              Collura and colleagues, Clinical EEG and Neuroscience. Received 7 June 2023, revised 29 November 2024,
+              accepted 3 December 2024. Minimum recording of the 19-site 10–20 montage, visual inspection of the whole
+              record, selection of artifact-free eyes-open and eyes-closed segments, and limits on automated artifacting,
+              source imaging, and discriminant functions. Supported by IQCB. Not a neurofeedback Standard of Care.
+            </p>
+            <p className="mt-2">
+              <a className="text-teal underline" href="/docs/QEEG-Minimum-Guidelines-ECNS.pdf" download>
+                Download the PDF
+              </a>
+            </p>
+          </li>
+          <li>
+            <p className="font-medium text-navy">Recommended guidelines for QEEG report writing</p>
+            <p className="mt-1 text-muted leading-relaxed">
+              IQCB committee guidance dated 16 March 2025. A report has seven sections, a disclaimer that it does not
+              diagnose, and a signature by a qualified clinician (QEEG-D or QEEG-DL). AI may help gather or summarize.
+              It is not the interpretation. Artifact review and clinical correlation stay with the clinician.
+            </p>
+            <p className="mt-2">
+              <a className="text-teal underline" href="/docs/IQCB-Guidelines-for-Report-Writing-03-16-2025.pdf" download>
+                Download the PDF
+              </a>
+            </p>
+          </li>
+        </ul>
+      </section>
+
       <section className="mx-auto max-w-6xl px-4 py-6">
         <h2 className="font-serif text-2xl text-navy mb-4">Source table</h2>
         <div className="flex flex-wrap gap-2 mb-4">

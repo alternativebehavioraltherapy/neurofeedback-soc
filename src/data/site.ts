@@ -14,7 +14,6 @@ export const NAV = [
   { to: "/documents", label: "Documents" },
   { to: "/structure", label: "Structure" },
   { to: "/working-group", label: "Working Group" },
-  { to: "/contact", label: "Contact" },
 ] as const;
 
 export const PEOPLE = [
@@ -63,5 +62,19 @@ export const DOCUMENTS = [
     label: "History and source map",
     href: "/docs/History_of_Neurofeedback_Practice_Standards.docx",
     filename: "History_of_Neurofeedback_Practice_Standards.docx",
+  },
+  {
+    title: "IQCB minimum technical requirements for clinical QEEG",
+    role: "Collura and colleagues, Clinical EEG and Neuroscience (2025). Minimum acquisition, visual inspection of the raw EEG, artifact handling, and quantitative processing. An IQCB-supported technical guideline, not this working group’s standard.",
+    label: "Prior instrument · 2025",
+    href: "/docs/QEEG-Minimum-Guidelines-ECNS.pdf",
+    filename: "QEEG-Minimum-Guidelines-ECNS.pdf",
+  },
+  {
+    title: "IQCB recommended guidelines for QEEG report writing",
+    role: "Committee guidance dated 16 March 2025. Seven report sections, a required disclaimer, and a limit on using AI as the interpretation. Not this working group’s standard.",
+    label: "Prior instrument · 16 March 2025",
+    href: "/docs/IQCB-Guidelines-for-Report-Writing-03-16-2025.pdf",
+    filename: "IQCB-Guidelines-for-Report-Writing-03-16-2025.pdf",
   },
 ];

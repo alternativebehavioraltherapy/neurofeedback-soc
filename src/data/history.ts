@@ -41,7 +41,7 @@ export const CHRONOLOGY: { year: string; text: string }[] = [
   },
   {
     year: "2025",
-    text: "IQCB minimum technical requirements for clinical QEEG and recommended report-writing guidance.",
+    text: "IQCB supported two documents: Collura and colleagues, minimum technical requirements for clinical QEEG (Clinical EEG and Neuroscience; received 7 June 2023, accepted 3 December 2024), and recommended guidelines for QEEG report writing dated 16 March 2025. Both require a qualified person to review the raw EEG. Neither is a general neurofeedback Standard of Care.",
   },
   {
     year: "2026",
@@ -149,14 +149,21 @@ export const HISTORY_ROWS: HistoryRow[] = [
     type: "QEEG technical guideline",
     what: "Acquisition, visual inspection of the raw EEG, artifact handling, and quantitative processing minima.",
     not: "Not a general neurofeedback Standard of Care.",
-    links: [{ label: "DOI", href: "https://doi.org/10.1177/15500594241308654" }],
+    links: [
+      { label: "DOI", href: "https://doi.org/10.1177/15500594241308654" },
+      { label: "IQCB PDF", href: "https://qeegcertificationboard.org/wp-content/uploads/QEEG-Minimum-Guidelines-ECNS.pdf" },
+      { label: "Download", href: "/docs/QEEG-Minimum-Guidelines-ECNS.pdf" },
+    ],
   },
   {
     source: "IQCB Recommended Guidelines for QEEG Report Writing (16 March 2025).",
     type: "QEEG report-writing guidance",
     what: "Recommended report sections. Computer-generated text does not replace clinician review of raw traces.",
     not: "Not a general neurofeedback Standard of Care.",
-    links: [{ label: "Report-writing PDF", href: "https://qeegcertificationboard.org/wp-content/uploads/IQCB-Guidelines-for-Report-Writing-03-16-2025.pdf" }],
+    links: [
+      { label: "IQCB PDF", href: "https://qeegcertificationboard.org/wp-content/uploads/IQCB-Guidelines-for-Report-Writing-03-16-2025.pdf" },
+      { label: "Download", href: "/docs/IQCB-Guidelines-for-Report-Writing-03-16-2025.pdf" },
+    ],
   },
   {
     source: "American Clinical Neurophysiology Society. Guideline 1 (2016). Minimum Technical Requirements for Performing Clinical EEG.",

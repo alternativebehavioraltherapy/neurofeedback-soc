@@ -325,6 +325,10 @@ export const SECTIONS: StandardSection[] = [
         kind: "p",
         text: "Software text is not accepted as the clinical interpretation. Interpretation is correlated with history, symptoms, medications, and other findings. Findings that suggest medical evaluation are referred. Quantitative EEG used to guide neurofeedback does not replace a clinical EEG interpretation when one is indicated. Progress maps are held to the same raw-validation standard as intake maps.",
       },
+      {
+        kind: "p",
+        text: "Two 2025 documents from the International QEEG Certification Board address the same gap from the quantitative-EEG side: minimum technical requirements for clinical QEEG, and recommended guidelines for QEEG report writing. This working group does not adopt them. They are prior instruments. They require visual review of the raw record, a qualified clinician’s sign-off, and a limit on automated or AI interpretation. Copies are in the documents library.",
+      },
     ],
   },
   {

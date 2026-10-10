@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Mail, Phone } from "lucide-react";
 import { PageHeader } from "@/components/layout/SiteShell";
 import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_TEL, PEOPLE } from "@/data/site";
 
@@ -15,7 +16,7 @@ function WorkingGroup() {
       <PageHeader
         kicker="People"
         title="Working group"
-        lede="This project was initially headed by Dr. Gary J. Schummer. It is a working group, not a licensing body. Photographs and longer biographies will be added."
+        lede="This project was initially headed by Dr. Gary J. Schummer. It is a working group, not a licensing body. Photographs and longer biographies will be added. Comments go to the contacts below."
       />
       <p className="mx-auto max-w-5xl px-4 pt-6 text-muted leading-relaxed">
         How a later compact might be organized is sketched on the{" "}
@@ -40,19 +41,34 @@ function WorkingGroup() {
           <p className="mt-2 text-muted">Names, roles, and photographs will be published here later.</p>
         </article>
       </div>
-      <div className="mx-auto max-w-3xl px-4 pb-12">
-        <aside className="rounded-lg bg-paper-2 border border-rule p-6">
-          <h2 className="font-serif text-xl text-navy">Comment on the draft</h2>
-          <p className="mt-2 text-muted">
-            This working group invites comment on the draft. Email{" "}
-            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-            {" "}or call{" "}
-            <a href={CONTACT_TEL}>{CONTACT_PHONE}</a>.
-          </p>
-          <Link to="/contact" className="mt-4 inline-block text-teal">
-            Contact page
-          </Link>
-        </aside>
+      <div className="mx-auto max-w-3xl px-4 pb-16">
+        <h2 className="font-serif text-2xl text-navy">Contact</h2>
+        <p className="mt-2 text-muted leading-relaxed">
+          These are the present contacts, via Joshua Moore’s clinic. Additional emails and numbers will be added as
+          people consent. A message is a comment on the draft, not a request for clinical care.
+        </p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="rounded-lg border border-rule bg-surface p-6 no-underline hover:border-teal"
+          >
+            <span className="inline-flex size-11 items-center justify-center rounded-md bg-navy text-paper">
+              <Mail className="size-5" aria-hidden />
+            </span>
+            <p className="mt-4 text-xs uppercase tracking-[0.16em] text-gold">Email</p>
+            <p className="mt-1 font-serif text-lg text-navy break-all">{CONTACT_EMAIL}</p>
+          </a>
+          <a href={CONTACT_TEL} className="rounded-lg border border-rule bg-surface p-6 no-underline hover:border-teal">
+            <span className="inline-flex size-11 items-center justify-center rounded-md bg-navy text-paper">
+              <Phone className="size-5" aria-hidden />
+            </span>
+            <p className="mt-4 text-xs uppercase tracking-[0.16em] text-gold">Phone</p>
+            <p className="mt-1 font-serif text-xl text-navy">{CONTACT_PHONE}</p>
+          </a>
+        </div>
+        <p className="mt-6 text-sm text-muted leading-relaxed">
+          This site is the working-group proposal. It is not the clinic website of Alternative Behavioral Therapy.
+        </p>
       </div>
     </>
   );
