@@ -13,6 +13,7 @@ export const NAV = [
   { to: "/history", label: "History" },
   { to: "/structure", label: "Structure" },
   { to: "/working-group", label: "Working Group" },
+  { to: "/directory", label: "Directory", badge: "Beta" },
 ] as const;
 
 export const PEOPLE = [

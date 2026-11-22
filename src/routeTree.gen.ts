@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DirectoryRouteImport } from './routes/directory'
 import { Route as DocumentsRouteImport } from './routes/documents'
 import { Route as HistoryRouteImport } from './routes/history'
 import { Route as ProposalRouteImport } from './routes/proposal'
@@ -26,6 +27,11 @@ const IndexRoute = IndexRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DirectoryRoute = DirectoryRouteImport.update({
+  id: '/directory',
+  path: '/directory',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DocumentsRoute = DocumentsRouteImport.update({
@@ -62,6 +68,7 @@ const WorkingGroupRoute = WorkingGroupRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/directory': typeof DirectoryRoute
   '/documents': typeof DocumentsRoute
   '/history': typeof HistoryRoute
   '/proposal': typeof ProposalRoute
@@ -72,6 +79,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/directory': typeof DirectoryRoute
   '/documents': typeof DocumentsRoute
   '/history': typeof HistoryRoute
   '/proposal': typeof ProposalRoute
@@ -83,6 +91,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/directory': typeof DirectoryRoute
   '/documents': typeof DocumentsRoute
   '/history': typeof HistoryRoute
   '/proposal': typeof ProposalRoute
@@ -95,6 +104,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/contact'
+    | '/directory'
     | '/documents'
     | '/history'
     | '/proposal'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/contact'
+    | '/directory'
     | '/documents'
     | '/history'
     | '/proposal'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/contact'
+    | '/directory'
     | '/documents'
     | '/history'
     | '/proposal'
@@ -126,6 +138,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
+  DirectoryRoute: typeof DirectoryRoute
   DocumentsRoute: typeof DocumentsRoute
   HistoryRoute: typeof HistoryRoute
   ProposalRoute: typeof ProposalRoute
@@ -148,6 +161,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/directory': {
+      id: '/directory'
+      path: '/directory'
+      fullPath: '/directory'
+      preLoaderRoute: typeof DirectoryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/documents': {
@@ -198,6 +218,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
+  DirectoryRoute: DirectoryRoute,
   DocumentsRoute: DocumentsRoute,
   HistoryRoute: HistoryRoute,
   ProposalRoute: ProposalRoute,

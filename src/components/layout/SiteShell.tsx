@@ -28,6 +28,19 @@ function DraftBanner() {
   );
 }
 
+function BetaBadge({ onDark = false }: { onDark?: boolean }) {
+  return (
+    <span
+      className={cn(
+        "ml-1 shrink-0 whitespace-nowrap rounded-sm border px-1 py-px text-[10px] font-semibold uppercase leading-none tracking-wide",
+        onDark ? "border-paper/60 text-paper" : "border-gold/50 bg-gold/15 text-gold",
+      )}
+    >
+      Beta
+    </span>
+  );
+}
+
 function Header() {
   const [open, setOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -50,16 +63,18 @@ function Header() {
         <nav className="hidden xl:flex items-center gap-0.5" aria-label="Primary">
           {NAV.map((item) => {
             const active = item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
+            const badge = "badge" in item ? item.badge : undefined;
             return (
               <Link
                 key={item.to}
                 to={item.to}
                 className={cn(
-                  "rounded-md px-2 py-2 text-[13px] no-underline transition-colors",
+                  "inline-flex items-center whitespace-nowrap rounded-md px-2 py-2 text-[13px] no-underline transition-colors",
                   active ? "bg-navy text-paper" : "text-navy hover:bg-paper-2",
                 )}
               >
-                {item.label}
+                <span>{item.label}</span>
+                {badge ? <BetaBadge onDark={active} /> : null}
               </Link>
             );
           })}
@@ -76,16 +91,20 @@ function Header() {
       </div>
       {open ? (
         <nav className="xl:hidden border-t border-rule bg-paper px-4 py-3 flex flex-col gap-1" aria-label="Mobile">
-          {NAV.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="rounded-md px-3 py-3 text-navy no-underline hover:bg-paper-2"
-              onClick={() => setOpen(false)}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {NAV.map((item) => {
+            const badge = "badge" in item ? item.badge : undefined;
+            return (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="inline-flex items-center whitespace-nowrap rounded-md px-3 py-3 text-navy no-underline hover:bg-paper-2"
+                onClick={() => setOpen(false)}
+              >
+                <span>{item.label}</span>
+                {badge ? <BetaBadge /> : null}
+              </Link>
+            );
+          })}
         </nav>
       ) : null}
       <p className="border-t border-rule bg-paper-2 px-4 py-1.5 text-[11px] leading-snug text-muted">
@@ -140,6 +159,12 @@ function Footer() {
             </Link>
             <Link to="/working-group" className="text-paper/90 no-underline hover:underline">
               Working Group
+            </Link>
+            <Link to="/directory" className="inline-flex items-center whitespace-nowrap text-paper/90 no-underline hover:underline">
+              Directory
+              <span className="ml-1 shrink-0 whitespace-nowrap rounded-sm border border-paper/50 px-1 py-px text-[10px] font-semibold uppercase leading-none tracking-wide text-paper">
+                Beta
+              </span>
             </Link>
           </p>
         </div>
