@@ -133,7 +133,7 @@ function Footer() {
             This site is the working-group proposal. It is not the clinic website of Alternative Behavioral Therapy.
           </p>
           <p className="mt-2 text-sm text-paper/70">
-            The SoC mark on this site is theoretical and is not a certification.
+            The SoC seal is not a certification. Use it only if you signed the agreement, follow the draft, and are listed in the directory.
           </p>
         </div>
         <div className="sm:text-right">
@@ -159,6 +159,9 @@ function Footer() {
             </Link>
             <Link to="/working-group" className="text-paper/90 no-underline hover:underline">
               Working Group
+            </Link>
+            <Link to="/participate" className="text-paper/90 no-underline hover:underline">
+              Participate
             </Link>
             <Link to="/directory" className="inline-flex items-center whitespace-nowrap text-paper/90 no-underline hover:underline">
               Directory

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { PageHeader } from "@/components/layout/SiteShell";
 import {
@@ -129,6 +129,11 @@ function DirectoryPage() {
         lede="People who asked to be listed, so colleagues can find one another. This is not a clinic. It is not a complete list. A listing is not an endorsement, a certification, or a statement about results."
       />
       <div className="mx-auto max-w-6xl px-4 py-10">
+        <p className="mb-6 rounded-md border border-rule bg-paper-2 px-4 py-3 text-sm leading-relaxed text-navy">
+          To be listed, sign the agreement first, then complete the directory form. The seal may be used only by someone
+          who has signed, follows the draft, and appears here.{" "}
+          <Link to="/participate">Agreement, form, and seal download</Link>
+        </p>
         {result.ok && result.ceiling.over ? (
           <div className="mb-6 rounded-md border border-gold/40 bg-warn px-4 py-3 text-sm text-ink" role="status">
             <p className="font-medium text-navy">

@@ -40,6 +40,12 @@ function Home() {
               >
                 Read the draft standards
               </Link>
+              <Link
+                to="/participate"
+                className="inline-flex min-h-11 items-center rounded-md border border-paper/40 px-5 py-2.5 text-paper no-underline"
+              >
+                Agree and be listed
+              </Link>
             </div>
           </div>
         </div>
@@ -62,9 +68,16 @@ function Home() {
           body={`This is a proposal, not an adopted instrument. Email ${CONTACT_EMAIL} or call ${CONTACT_PHONE}. Additional contacts will be posted as people consent.`}
         />
         <Card
+          kicker="The seal"
+          title="Agree, be listed, then use the seal"
+          body="Sign the agreement first, then complete the directory form. The seal is copyrighted. Use it only if you signed, you follow the draft, and you are listed. It is not a license or a certification."
+          to="/participate"
+          linkLabel="How to participate"
+        />
+        <Card
           kicker="The structure"
           title="A voluntary compact, later"
-          body="A published floor of practice would live in a nonprofit compact that people opt into. Societies could support a draft without becoming the regulator. The mark on this site is theoretical."
+          body="A published floor of practice would live in a nonprofit compact that people opt into. Societies could support a draft without becoming the regulator."
           to="/structure"
           linkLabel="How this would be organized"
         />
@@ -145,7 +158,7 @@ function Card({
   kicker: string;
   title: string;
   body: string;
-  to?: "/structure";
+  to?: "/structure" | "/participate";
   linkLabel?: string;
 }) {
   return (

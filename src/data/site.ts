@@ -4,7 +4,12 @@ export const CONTACT_EMAIL = "office@altbehtherapy.com";
 export const CONTACT_PHONE = "360-553-1350";
 export const CONTACT_TEL = "tel:+13605531350";
 export const MARK_LEGEND =
-  "Theoretical participant mark for committee discussion. Not a license. Not a BCIA credential or an IQCB credential. Not society endorsement. Not being issued now.";
+  "The seal may be used only by someone who has signed the agreement, follows the draft, and is listed in the directory. Not a license. Not a BCIA or IQCB credential. Not society endorsement.";
+
+export const AGREEMENT_URL = "https://signathing.com/t/ym2kIR7Q2UibMbIbEFUXTZMs";
+export const DIRECTORY_FORM_URL = "https://forms.gle/ucGeq2jEmAUHm2Jz5";
+export const SEAL_SRC = "/brand/neurofeedback-soc-seal.png";
+export const SEAL_DOWNLOAD_NAME = "Neurofeedback-SOC-Seal.png";
 
 export const NAV = [
   { to: "/", label: "Home" },
@@ -13,6 +18,7 @@ export const NAV = [
   { to: "/history", label: "History" },
   { to: "/structure", label: "Structure" },
   { to: "/working-group", label: "Working Group" },
+  { to: "/participate", label: "Participate" },
   { to: "/directory", label: "Directory", badge: "Beta" },
 ] as const;
 

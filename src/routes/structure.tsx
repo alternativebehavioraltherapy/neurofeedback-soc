@@ -86,10 +86,10 @@ function Structure() {
           Do not display ISNR, AAPB, or BCIA logos here as endorsements. They have not adopted this draft.
         </aside>
 
-        <h2 className="font-serif text-2xl text-navy pt-4">6. What the theoretical seal on this site would mean</h2>
+        <h2 className="font-serif text-2xl text-navy pt-4">6. What the seal means</h2>
         <p>
-          The shield / brain / SoC mark is a thought-experiment participant seal. It exists so a committee can see the
-          idea.
+          The shield, brain, and SoC seal marks a voluntary agreement to this working draft. A later compact could
+          license it. Until then, use follows the rules on the Participate page.
         </p>
         <p>
           Honest later claim, if a compact is formed: “Participant — has agreed to the Essential Practice Standards
@@ -100,7 +100,12 @@ function Structure() {
           “Guaranteed clinical outcome.”
         </p>
         <p>
-          The mark is not being issued. No clinic should copy it onto marketing as proof of certification.
+          The seal may be used now only by a person who has signed the agreement, follows the draft standards, and is
+          listed in the directory. It is not proof of certification. No clinic should present it as a license or as
+          society endorsement.
+        </p>
+        <p>
+          <Link to="/participate">See the agreement, the directory form, and the seal download</Link>
         </p>
 
         <h2 className="font-serif text-2xl text-navy pt-4">7. What we are asking a committee</h2>

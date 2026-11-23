@@ -14,6 +14,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DirectoryRouteImport } from './routes/directory'
 import { Route as DocumentsRouteImport } from './routes/documents'
 import { Route as HistoryRouteImport } from './routes/history'
+import { Route as ParticipateRouteImport } from './routes/participate'
 import { Route as ProposalRouteImport } from './routes/proposal'
 import { Route as StandardsRouteImport } from './routes/standards'
 import { Route as StructureRouteImport } from './routes/structure'
@@ -44,6 +45,11 @@ const HistoryRoute = HistoryRouteImport.update({
   path: '/history',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ParticipateRoute = ParticipateRouteImport.update({
+  id: '/participate',
+  path: '/participate',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProposalRoute = ProposalRouteImport.update({
   id: '/proposal',
   path: '/proposal',
@@ -71,6 +77,7 @@ export interface FileRoutesByFullPath {
   '/directory': typeof DirectoryRoute
   '/documents': typeof DocumentsRoute
   '/history': typeof HistoryRoute
+  '/participate': typeof ParticipateRoute
   '/proposal': typeof ProposalRoute
   '/standards': typeof StandardsRoute
   '/structure': typeof StructureRoute
@@ -82,6 +89,7 @@ export interface FileRoutesByTo {
   '/directory': typeof DirectoryRoute
   '/documents': typeof DocumentsRoute
   '/history': typeof HistoryRoute
+  '/participate': typeof ParticipateRoute
   '/proposal': typeof ProposalRoute
   '/standards': typeof StandardsRoute
   '/structure': typeof StructureRoute
@@ -94,6 +102,7 @@ export interface FileRoutesById {
   '/directory': typeof DirectoryRoute
   '/documents': typeof DocumentsRoute
   '/history': typeof HistoryRoute
+  '/participate': typeof ParticipateRoute
   '/proposal': typeof ProposalRoute
   '/standards': typeof StandardsRoute
   '/structure': typeof StructureRoute
@@ -107,6 +116,7 @@ export interface FileRouteTypes {
     | '/directory'
     | '/documents'
     | '/history'
+    | '/participate'
     | '/proposal'
     | '/standards'
     | '/structure'
@@ -118,6 +128,7 @@ export interface FileRouteTypes {
     | '/directory'
     | '/documents'
     | '/history'
+    | '/participate'
     | '/proposal'
     | '/standards'
     | '/structure'
@@ -129,6 +140,7 @@ export interface FileRouteTypes {
     | '/directory'
     | '/documents'
     | '/history'
+    | '/participate'
     | '/proposal'
     | '/standards'
     | '/structure'
@@ -141,6 +153,7 @@ export interface RootRouteChildren {
   DirectoryRoute: typeof DirectoryRoute
   DocumentsRoute: typeof DocumentsRoute
   HistoryRoute: typeof HistoryRoute
+  ParticipateRoute: typeof ParticipateRoute
   ProposalRoute: typeof ProposalRoute
   StandardsRoute: typeof StandardsRoute
   StructureRoute: typeof StructureRoute
@@ -184,6 +197,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HistoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/participate': {
+      id: '/participate'
+      path: '/participate'
+      fullPath: '/participate'
+      preLoaderRoute: typeof ParticipateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/proposal': {
       id: '/proposal'
       path: '/proposal'
@@ -221,6 +241,7 @@ const rootRouteChildren: RootRouteChildren = {
   DirectoryRoute: DirectoryRoute,
   DocumentsRoute: DocumentsRoute,
   HistoryRoute: HistoryRoute,
+  ParticipateRoute: ParticipateRoute,
   ProposalRoute: ProposalRoute,
   StandardsRoute: StandardsRoute,
   StructureRoute: StructureRoute,
