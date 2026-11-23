@@ -73,7 +73,7 @@ function Participate() {
               The seal is copyrighted. You may use this PNG only if all three are true: you signed the agreement, you
               follow the draft standards, and you are listed in the directory.
             </p>
-            <div className="mt-5 max-w-sm rounded-lg bg-ink p-4">
+            <div className="mt-5 max-w-xs">
               <img
                 src={SEAL_SRC}
                 alt="SoC seal: a profile, brain wave, and shield, with the words Standards of Care in Neurofeedback"
